@@ -1,6 +1,8 @@
 # 20440_Project
 ### Evaluating the Correlation Between Stress and Age in the Mouse Brain at the Single Cell Transcriptomic Level
 
+Emma Finburgh and Nickeisha Cuthbert
+
 ## Overview
 This repository currently contains the code required to perform the processing, integration, dimensional reduction, and UMAP visualization of two single cell RNA sequencing datasets (old/young and stressed/baseline mice) of the mouse brain. The goal of the analysis is to determine what transcriptomic signatures are shared between aged and stressed mice, as this correlation has been alluded to in literature but not quantified at the single cell transcriptomic level. This initial analysis involves filtering, processing, and normalizing the raw hypothalamus single cell RNA sequencing data for the stressed/baseline mice (Brivio et al., 2023) the same way as described by Ximerakis et al. for their old/young condition mice. Then, anchor integration is performed to first combine old/young conditions on their own and stress/baseline conditions on their own, and finally, to combine all age and stress conditions. After integration, principal component analysis (PCA) is performed using 20 PCs, followed by nearest neighbors and clustering analyses, allowing for visualization of all combined data on a UMAP. Suerat v5 (Hao et al., 2023) is utilized in RStudio to perform the analysis.
 
