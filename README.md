@@ -4,7 +4,7 @@
 Emma Finburgh and Nickeisha Cuthbert
 
 ## Overview
-This repository currently contains the code required to perform the processing, integration, dimensional reduction, and UMAP visualization of two single cell RNA sequencing datasets (old/young and stressed/baseline mice) of the mouse brain. The goal of the analysis is to determine what transcriptomic signatures are shared between aged and stressed mice, as this correlation has been alluded to in literature but not quantified at the single cell transcriptomic level. This initial analysis involves filtering, processing, and normalizing the raw hypothalamus single cell RNA sequencing data for the stressed/baseline mice (Brivio et al., 2023) the same way as described by Ximerakis et al. for their old/young condition mice. Then, anchor integration is performed to first combine old/young conditions on their own and stress/baseline conditions on their own, and finally, to combine all age and stress conditions. After integration, principal component analysis (PCA) is performed using 20 PCs, followed by nearest neighbors and clustering analyses, allowing for visualization of all combined data on a UMAP. Suerat v5 (Hao et al., 2023) is utilized in RStudio to perform the analysis.
+This repository currently contains the code required to perform the processing, integration, dimensional reduction, and UMAP visualization of two single cell RNA sequencing datasets (old/young and stressed/baseline mice) of the mouse brain. The goal of the analysis is to determine what transcriptomic signatures are shared between aged and stressed mice, as this correlation has been alluded to in literature but not quanlified at the single cell transcriptomic level. This initial analysis involves filtering, processing, and normalizing the raw hypothalamus single cell RNA sequencing data for the stressed/baseline mice (Brivio et al., 2023) the same way as described by Ximerakis et al. for their old/young condition mice. Then, anchor integration is performed to first combine old/young conditions on their own and stress/baseline conditions on their own, and finally, to combine all age and stress conditions. After integration, principal component analysis (PCA) is performed using 20 PCs, followed by nearest neighbors and clustering analyses, allowing for visualization of all combined data on a UMAP. Suerat v5 (Hao et al., 2023) is utilized in RStudio to perform the analysis.
 
 ## Data
 The first dataset (Ximerakis et al., 2019) contains processed single cell RNA sequencing data from the whole brains of young and old mice. 
@@ -17,6 +17,7 @@ The second dataset (Brivio et al., 2023) contains raw 10x files ("barcodes", "fe
 This folder contains "20440_Project_RScript.R", the R script which performs the single cell RNA sequencing processing, integration, and dimensional reduction, and then finally creates the UMAP figure. 
   
 #### Data:
+Since the data is too big to be uploaded, there is a Data.md file specifying where to download the necessary data. The following describes how the Data folder should be created once the data is downloaded in order to be able to run with the above code.
   ##### data_old:
   This folder contains the pre-processed 10X .txt.gz files from Ximerakis et al. of single cell RNAseq reads from aged mice.
   
@@ -35,9 +36,6 @@ This folder contains "20440_Project_RScript.R", the R script which performs the 
   
 #### Figures:
 This folder contains the Stress_age_combined_umap.png, the output of the code stored in the "Code" folder. This figure is a UMAP produced after principal component analysis (PCA) is performed on all conditions of the integrated data: old (whole brain), young (whole brain), baseline control (hypothalamus), chronic mild stress control (hypothalamus), baseline subjected to acute restraint stress (hypothalamus), and chronic mild stress subjected to acute restraint stress(hypothalamus). The figure plots UMAP dimension 1 vs. UMAP dimension 2, and results in an outputted 42 numbered clusters, which are visualized by color.
-
-#### RDS_files:
-This folder contains the .RDS files produced at intermediate stages of the integration of the processed single cell RNA sequencing data. As generating these files takes siginificant computational resources, these files may be loaded into R at the appropriate steps instead of requiring the user to re-generate them.
 
 ## Installation
 To run this code, first set up a file structure comparable to that of the file structure on this repository. Then, download the "20440_Project_RScript.R" file and all of the data contained in the "Data" folder. Open the "20440_Project_RScript.R" file in RStudio (or other preferred method of running R scripts) and update the "setwd()" line to specify the appropriate file path to your the R script. From here, running the R script should output the UMAP of the data integrated from all mouse conditions. 
