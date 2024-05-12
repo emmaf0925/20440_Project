@@ -14,9 +14,8 @@ The first dataset (Ximerakis et al., 2019) contains processed single cell RNA se
 The second dataset (Brivio et al., 2023) contains raw 10x files ("barcodes", "features", and "matrix") from the hypothalamuses of either baseline or chronic mild stress condition mice either untreated or subjected to acute restraint stress.
 
 
-
 ## Folder structure
-#### Code:
+### Code:
   ##### "20440_Project_RScript.R":
   This R script performs the following on the scRNA-seq data:
       -Data processing
@@ -33,7 +32,7 @@ The second dataset (Brivio et al., 2023) contains raw 10x files ("barcodes", "fe
       -Regular DEG heatmap generation on consistent overlapping genes between Old vs. Young and CMS vs. Baseline conditions
       -
 
-#### Data:
+### Data:
 Since the data is too big to be uploaded, there is a Data.md file specifying where to download the necessary data. The following describes how the Data folder should be created once the data is downloaded in order to be able to run with the above code.
   ##### data_old:
   This folder should contain the pre-processed 10X .txt.gz files from Ximerakis et al. of single cell RNAseq reads from aged      mice.
@@ -56,7 +55,7 @@ Since the data is too big to be uploaded, there is a Data.md file specifying whe
   This folder should contain the barcodes, features, and matrix files from the raw 10X single cell RNAseq hypothalamus data
   from the Brivio et al. for the chronic mild stress control condition mice.
   
-#### Figures:
+### Figures:
 This folder contains the following figures:
     -
     -
