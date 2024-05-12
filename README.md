@@ -18,19 +18,18 @@ The second dataset (Brivio et al., 2023) contains raw 10x files ("barcodes", "fe
 ### Code:
   ##### "20440_Project_RScript.R":
   This R script performs the following on the scRNA-seq data:
-  ##### Data processing
-  ##### Integration
-  ##### Dimensional reduction
-  ##### UMAP figure generation
-  ##### Differential gene expression analysis using MAST
-  ##### Volcano plot generation
-  ##### Feature plot generation (not included in 20.440 final report)
+  ###### - Data processing
+  ###### - Integration
+  ###### - Dimensional reduction
+  ###### - UMAP figure generation
+  ###### - Differential gene expression analysis using MAST
+  ###### - Volcano plot generation
+  ###### - Feature plot generation (not included in 20.440 final report)
       
   ##### "20440_Project_PythonCode.iynb"
   This Python notebook performs the following:
-      -Hierarchical clustering DEG heatmap generation on all significant genes
-      -Regular DEG heatmap generation on consistent overlapping genes between Old vs. Young and CMS vs. Baseline conditions
-      -
+  ###### - Hierarchical clustering DEG heatmap generation on all significant genes
+  ###### - Regular DEG heatmap generation on consistent overlapping genes between Old vs. Young and CMS vs. Baseline conditions
 
 ### Data:
 Since the data is too big to be uploaded, there is a Data.md file specifying where to download the necessary data. The following describes how the Data folder should be created once the data is downloaded in order to be able to run with the above code.
