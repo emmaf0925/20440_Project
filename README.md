@@ -18,13 +18,13 @@ The second dataset (Brivio et al., 2023) contains raw 10x files ("barcodes", "fe
 ### Code:
   ##### "20440_Project_RScript.R":
   This R script performs the following on the scRNA-seq data:
-  ###### Data processing
-  ###### Integration
-  ###### Dimensional reduction
-      -UMAP figure generation
-      -Differential gene expression analysis using MAST
-      -Volcano plot generation
-      -Feature plot generation (not included in 20.440 final report)
+  ##### Data processing
+  ##### Integration
+  ##### Dimensional reduction
+  ##### UMAP figure generation
+  ##### Differential gene expression analysis using MAST
+  ##### Volcano plot generation
+  ##### Feature plot generation (not included in 20.440 final report)
       
   ##### "20440_Project_PythonCode.iynb"
   This Python notebook performs the following:
