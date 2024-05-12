@@ -14,6 +14,7 @@ The first dataset (Ximerakis et al., 2019) contains processed single cell RNA se
 The second dataset (Brivio et al., 2023) contains raw 10x files ("barcodes", "features", and "matrix") from the hypothalamuses of either baseline or chronic mild stress condition mice either untreated or subjected to acute restraint stress.
 
 
+
 ## Folder structure
 #### Code:
   ##### "20440_Project_RScript.R":
