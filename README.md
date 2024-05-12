@@ -24,7 +24,7 @@ The second dataset (Brivio et al., 2023) contains raw 10x files ("barcodes", "fe
   ###### - UMAP figure generation
   ###### - Differential gene expression analysis using MAST
   ###### - Volcano plot generation
-  ###### - Feature plot generation (not included in 20.440 final report)
+  ###### - Feature plot generation
       
   ##### "20440_Project_PythonCode.iynb"
   This Python notebook performs the following:
@@ -56,8 +56,8 @@ Since the data is too big to be uploaded, there is a Data.md file specifying whe
   
 ### Figures:
 This folder contains the following figures:
-    -
-    -
+  ###### -
+  ###### -
     -
     -
     -
