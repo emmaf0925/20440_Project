@@ -4,9 +4,9 @@
 Emma Finburgh and Nickeisha Cuthbert
 
 ## Overview
-This repository contains the code required to perform the processing, integration, dimensional reduction, UMAP visualization, differential gene expression analysis, and volcano plot and heatmap visualizations of two single-cell RNA sequencing datasets (old/young and stressed/baseline mice) of the mouse brain. The goal of the analysis is to determine what transcriptomic signatures are shared between aged and stressed mice, as this correlation has been alluded to in literature but not quanlified at the single cell transcriptomic level. 
+This repository contains the code required to perform the processing, integration, dimensional reduction, UMAP visualization, differential gene expression analysis, and volcano plot and heatmap visualizations of two single-cell RNA sequencing datasets (old/young (Ximerakis et al., 2019) and stressed (CMS)/baseline mice (Brivio et al., 2023)) of the mouse brain. The goal of the analysis is to determine what transcriptomic signatures are shared between aged and stressed mice, as this correlation has been alluded to in literature but not directly studied at the single cell transcriptomic level. 
 
-This initial analysis involves filtering, processing, and normalizing the raw hypothalamus single cell RNA sequencing data for the stressed/baseline mice (Brivio et al., 2023) the same way as described by Ximerakis et al. for their old/young condition mice. Then, anchor integration is performed to first combine old/young conditions on their own and stress/baseline conditions on their own, and finally, to combine all age and stress conditions. After integration, principal component analysis (PCA) is performed using 20 PCs, followed by nearest neighbors and clustering analyses, allowing for visualization of all combined data on a UMAP. Suerat v5 (Hao et al., 2023) is utilized in RStudio to perform the analysis.
+The analysis involves filtering, processing, and normalizing the raw hypothalamus single cell RNA sequencing data for the stressed (CMS)/baseline mice (Brivio et al., 2023) the same way as described by Ximerakis et al. for their old/young condition mice, using Suerat v5 (Hao et al., 2023) in RStudio. Anchor integration is performed to first combine old/young conditions on their own and stressed (CMS)/baseline conditions on their own, and finally, to combine all age and stress conditions. After integration, principal component analysis (PCA) is performed using 20 PCs, followed by nearest neighbors and clustering analyses, allowing for visualization of all combined data on a UMAP. Then, cell-type annotations are used to label the UMAP. The included R code also generates volcano plots for any desired comparison, but namely for old vs. young and CMS vs. baseline for each specific cell type. Lastly, the python code included generates heatmaps from the significantly dysregulated genes and from the dysregulated genes that overlap consistently between age and stree conditions.
 
 ## Data
 The first dataset (Ximerakis et al., 2019) contains processed single cell RNA sequencing data from the whole brains of young and old mice. 
@@ -55,16 +55,10 @@ Since the data is too big to be uploaded, there is a Data.md file specifying whe
   from the Brivio et al. for the chronic mild stress control condition mice.
   
 ### Figures:
-This folder contains the following figures:
-###### -
-###### -
-###### -
-###### -
-###### -
-###### -
-###### -
-
- 
+This folder contains the following figure types:
+###### - UMAP clustering of the integrated single-cell data, both as the 42 initially generated clusters and as 17 labeled cell types.
+###### - Volcano plots showing differential gene expression by each cell type and condition, with overlapping dyregulated genes annotated.
+###### - Differential gene expression heatmaps of clustered and unclustered top dysregulated genes for old vs. young and stressed vs. baseline conditions.
 
 ## Installation
 To run this code, first set up a file structure comparable to that of the file structure on this repository. Then, download the "20440_Project_RScript.R" file and all of the data specified in the "Data.md" file. Open the "20440_Project_RScript.R" file in RStudio (or other preferred method of running R scripts) and update the "setwd()" line to specify the appropriate file path to your the R script. From here, run desired code chunks from the 
