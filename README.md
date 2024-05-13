@@ -56,12 +56,15 @@ Since the data is too big to be uploaded, there is a Data.md file specifying whe
   
 ### Figures:
 This folder contains the following figures:
-  ###### -
-  ###### -
-    -
-    -
-    -
-    -
+###### -
+###### -
+###### -
+###### -
+###### -
+###### -
+###### -
+
+ 
 
 ## Installation
 To run this code, first set up a file structure comparable to that of the file structure on this repository. Then, download the "20440_Project_RScript.R" file and all of the data specified in the "Data.md" file. Open the "20440_Project_RScript.R" file in RStudio (or other preferred method of running R scripts) and update the "setwd()" line to specify the appropriate file path to your the R script. From here, run desired code chunks from the 
